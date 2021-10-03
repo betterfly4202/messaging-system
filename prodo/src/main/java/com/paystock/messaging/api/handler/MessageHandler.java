@@ -19,9 +19,7 @@ public class MessageHandler {
 
     public Mono<ServerResponse> send(ServerRequest request){
         return request.bodyToMono(MessageDto.class)
-                .doOnNext(msg -> log.info("User: {} -> : {}", msg.getUserId(), msg.getMessage()))
-                .flatMap(message ->
-                        ServerResponse.ok().contentType(MediaType.APPLICATION_JSON).bodyValue(message)
-                );
+                .doOnNext(msg -> log.warn("User: {} -> : {}", msg.getUserId(), msg.getMessage()))
+                .flatMap(message -> ServerResponse.ok().contentType(MediaType.APPLICATION_JSON).bodyValue(message));
     }
 }
