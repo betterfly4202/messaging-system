@@ -28,6 +28,7 @@ subprojects {
 
 	dependencies {
 		implementation 'org.springframework.boot:spring-boot-starter'
+		implementation 'org.springframework.boot:spring-boot-starter-webflux'
 		compileOnly 'org.projectlombok:lombok'
 		annotationProcessor 'org.projectlombok:lombok'
 		testImplementation 'org.springframework.boot:spring-boot-starter-test'
@@ -38,12 +39,13 @@ subprojects {
 
 project(':prodo') {
 	dependencies {
-		implementation 'org.springframework.boot:spring-boot-starter-webflux'
+
 	}
 }
 
 project(':neo') {
 	dependencies {
-
+		implementation project(':prodo')
+		implementation group: 'io.reactivex.rxjava2', name: 'rxjava', version: '2.2.21'
 	}
 }

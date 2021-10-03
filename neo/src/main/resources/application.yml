@@ -1,0 +1,9 @@
+spring:
+  main:
+    web-application-type: none
+
+client:
+  base-url: http://localhost
+  port: 8080
+  api:
+    message-send: /api/send
