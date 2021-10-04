@@ -16,16 +16,16 @@ public class NeoApplication implements CommandLineRunner {
 		SpringApplication.run(NeoApplication.class, args);
 	}
 
-	//FIXME : 클래스 분리
 	@Override
 	public void run(String... args){
 		Scanner sc = new Scanner(System.in);
-		System.out.print("메시지를 보낼 사용자명을 입력해주세요 : ");
+		System.out.print("사용자명을 입력해주세요 : ");
 		String userId = sc.nextLine();
 		sendMessageService.setUserId(userId);
+
 		while(sc.hasNextLine()){
 			sendMessageService.send(sc.nextLine());
 		}
 		sc.close();
- 	}
+	}
 }

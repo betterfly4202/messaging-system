@@ -1,6 +1,6 @@
 package com.paystock.messaging.sender.service;
 
-import com.paystock.messaging.api.handler.MessageDto;
+import com.paystock.messaging.api.dto.MessageDto;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
