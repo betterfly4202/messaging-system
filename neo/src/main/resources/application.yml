@@ -7,3 +7,7 @@ client:
   port: 8080
   api:
     message-send: /api/send
+
+logging:
+  file:
+    path: ./logs
