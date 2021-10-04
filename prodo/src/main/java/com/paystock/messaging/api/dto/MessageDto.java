@@ -1,4 +1,4 @@
-package com.paystock.messaging.api.handler;
+package com.paystock.messaging.api.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
