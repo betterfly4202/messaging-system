@@ -9,6 +9,27 @@
 
 ---
 
+## 실행 방법
+### prodo (message-api server)
+#### Docker 빌드 및 실행
+- gradle 이용한 docker image 생성
+```shell
+  gradle clean :prodo:bootBuildImage
+```
+
+- docker 실행
+```shell
+  docker run -p 8080:8080 prodo:1.0.0
+```
+
+### neo (message client)
+- SpringApplication 실행
+```shell
+  java -jar ~/messaging/neo/neo-1.0.0.jar
+```
+
+---
+
 ## 프로젝트 설명
 ### 개발 환경
 - SpringBoot 2.5.5
@@ -45,27 +66,7 @@
 ### neo
 - 메시지 발송을 위한 클라이언트 모듈
 - 사용 방법
-  1. 사용자 입력
-  2. 메시지 입력
+  1. 사용자 이름 입력
+  2. 전송할 메시지 입력
 
 ---
-
-## 실행 방법
-### prodo 
-#### Docker 빌드 및 실행
-- gradle 이용한 docker image 생성
-```shell
-  gradle clean :prodo:bootBuildImage
-```
-
-- docker 실행
-```shell
-  docker run -p 8080:8080 prodo:1.0.0
-```
-
-### neo
-- SpringApplication 실행
-```shell
-  java -jar ~/messaging/neo/neo-1.0.0.jar
-```
- 
